@@ -21,19 +21,23 @@ function getComputerChoice(min, max) {
  function getHumanChoice() {
     let humanInput = window.prompt('Rock, paper, or scissors?');
     if (humanInput != null) {
-        if (humanInput.toLowerCase == 'rock' || 'paper' || 'scissors') {
-            let humanChoice = humanInput.toLowerCase();
+        let humanInputLowerCase = humanInput.toLowerCase();
+        if (humanInputLowerCase == 'rock' || humanInputLowerCase == 'paper' || humanInputLowerCase == 'scissors') {
+            const humanChoice = humanInputLowerCase;
             return humanChoice;
-        } 
+        }
         else {
-            console.log('Valid answers are rock, paper, or scissors.');
-            getHumanChoice();
-            return
+            console.log('Valid answers are "rock", "paper", or "scissors".');
+            let humanChoice = getHumanChoice();
+            return humanChoice;
         }
     }
     else {
-        return
+        console.log('You must enter "rock", "paper", or "scissors".')
+        getHumanChoice();
+        return;
     }
+
 }
  
  /* initializing variables */
