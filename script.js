@@ -61,6 +61,7 @@ function getComputerChoice(min, max) {
     roundTotal++;
     console.log(`You chose ${humanChoice} and the computer chose ${computerChoice}.`);
     calculateRoundWinner(humanChoice, computerChoice);
+    console.log(`Your score is now  ${humanScore} and the computer score is ${computerScore}.`)
     return;
  }
  
